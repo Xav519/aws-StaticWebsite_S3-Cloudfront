@@ -8,7 +8,7 @@ The S3 bucket is **private** and **not publicly accessible**. CloudFront accesse
 
 ## 🏗️ Architecture Overview
 
-<img src="projectMini-S3CloudFrontAWS.png" alt="Secure S3 CloudFront Architecture" width="400"/>
+<img src="projectMini-S3CloudFrontAWS.png" alt="Secure S3 CloudFront Architecture" width="500"/>
 
 ### Key Security Features
 - ✅ S3 bucket **fully private**
