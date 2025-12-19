@@ -30,14 +30,15 @@ Private S3 Bucket
 ```
 .
 ├── TerraformCode/
-│   ├── main.tf
-│   ├── variables.tf
-│   └── outputs.tf
+│   ├── backend.tf
+|   ├── main.tf
+|   ├── output.tf
+│   ├── providers.tf
+│   └── variable.tf
 ├── www/
 │   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── images/
+│   ├── style.css/
+│   ├── script.js/
 └── README.md
 ```
 
@@ -80,7 +81,6 @@ Access is restricted using:
 
 ### 1️⃣ Prerequisites
 - AWS CLI configured
-- Terraform ≥ 1.3
 - An AWS account
 
 ### 2️⃣ Initialize Terraform
@@ -126,7 +126,6 @@ All files inside the `www/` directory are automatically uploaded to S3:
 - HTML
 - CSS
 - JavaScript
-- Images
 
 Terraform automatically sets the correct **Content-Type** based on file extension.
 
@@ -142,7 +141,6 @@ terraform apply
 ## ⚠️ Notes & Best Practices
 
 - CloudFront distributions take **5–15 minutes** to deploy
-- Avoid using `forwarded_values` in production (deprecated)
 - Use Cache Policies for advanced setups
 - Use ACM + custom domain for production websites
 
